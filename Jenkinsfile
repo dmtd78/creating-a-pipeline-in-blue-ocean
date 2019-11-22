@@ -14,6 +14,9 @@ pipeline {
     }
 
     stage('Test') {
+      environment {
+        CI = 'true'
+      }
       steps {
         sh '''#!/usr/bin/env sh
 
